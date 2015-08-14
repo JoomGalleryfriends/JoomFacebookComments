@@ -43,15 +43,17 @@ switch($app->input->get('view'))
     break;
 }
 
+$fb_app_id=$params->get('app_id', '');
+
 if($params->get('load_sdk', 1) && !defined('_MOD_JOOMFACEBOOKCOMMENTS_SDK_LOADED'))
 {
 ?><div id="fb-root"></div>
 <script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/de_DE/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) {return;}
+	js = d.createElement(s); js.id = id;
+<?php echo '	js.src = "//connect.facebook.net/' . str_replace("-", "_", $lang->getTag()) .'/all.js#xfbml=1' . ($fb_app_id != ''?'&appId='.$fb_app_id : '') . '";'; ?>
+	fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script><?php
   define('_MOD_JOOMFACEBOOKCOMMENTS_SDK_LOADED', true);
 }
