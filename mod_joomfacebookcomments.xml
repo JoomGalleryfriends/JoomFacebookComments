@@ -17,12 +17,15 @@
     <language tag="en-GB">en-GB/en-GB.mod_joomfacebookcomments.sys.ini</language>
     <language tag="de-DE">de-DE/de-DE.mod_joomfacebookcomments.ini</language>
     <language tag="de-DE">de-DE/de-DE.mod_joomfacebookcomments.sys.ini</language>
+	<language tag="it-IT">it-IT/it-IT.mod_joomfacebookcomments.ini</language>
+    <language tag="it-IT">it-IT/it-IT.mod_joomfacebookcomments.sys.ini</language>
   </languages>
   <config>
     <fields name="params">
       <fieldset name="basic">
         <field name="width" type="text" default="470" label="MOD_JOOMFACEBOOKCOMMENTS_FIELD_WIDTH_LABEL" description="MOD_JOOMFACEBOOKCOMMENTS_FIELD_WIDTH_DESC" />
         <field name="num_posts" type="text" default="10" label="MOD_JOOMFACEBOOKCOMMENTS_FIELD_NUMPOSTS_LABEL" description="MOD_JOOMFACEBOOKCOMMENTS_FIELD_NUMPOSTS_DESC" />
+		<field name="app_id" type="text" default="" label="MOD_JOOMFACEBOOKCOMMENTS_FIELD_APPID_LABEL" description="MOD_JOOMFACEBOOKCOMMENTS_FIELD_APPID_DESC" />
         <field name="colorscheme" type="radio" default="light" label="MOD_JOOMFACEBOOKCOMMENTS_FIELD_COLORSCHEME_LABEL" description="MOD_JOOMFACEBOOKCOMMENTS_FIELD_COLORSCHEME_DESC" class="btn-group">
           <option value="light">Light</option>
           <option value="dark">Dark</option>
